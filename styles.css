@@ -1,0 +1,689 @@
+/* =========================================================
+   ТЕПЛИЦА PSY — токены дизайн-системы
+   ========================================================= */
+:root {
+  --tp-green: #41886B;
+  --tp-green-dark: #1B4F3F;
+  --tp-graphite: #1C242E;
+  --tp-slate: #37465A;
+  --tp-warm-gray: #BDB6AE;
+  --tp-light: #EDEDEA;
+  --tp-white: #F4F3F3;
+
+  --tp-cream: #EDE8E4;
+  --tp-dusty-rose: #D9CDCC;
+  --tp-sand: #C1B0A7;
+  --tp-sage: #6E7F72;
+
+  --font: 'PT Sans', 'Segoe UI', Arial, sans-serif;
+
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --radius-btn: 12px;
+  --mark-size: 78px;
+
+  --pad-section-x: clamp(20px, 8vw, 96px);
+  --pad-section-y: clamp(56px, 10vw, 120px);
+
+  --sp-1: 24px;
+  --sp-2: 48px;
+  --sp-3: 72px;
+  --sp-4: 96px;
+
+  --shadow-soft: 0 8px 40px rgba(28, 36, 46, 0.12);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--tp-graphite);
+  background: var(--tp-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, blockquote, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; background: none; border: none; cursor: pointer; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.skip-link {
+  position: absolute; left: 12px; top: -60px;
+  background: var(--tp-green-dark); color: var(--tp-white);
+  padding: 12px 20px; border-radius: var(--radius-btn);
+  z-index: 200; transition: top 0.2s var(--ease);
+}
+.skip-link:focus { top: 12px; }
+
+:focus-visible {
+  outline: 2px solid var(--tp-green);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   TYPE SCALE
+   ========================================================= */
+.hero__title, .section-title, .plan__name,
+.manifesto__quote, .seeds__quote, .fit__statement, .closing__quote {
+  font-weight: 400;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
+}
+.hero__title em { font-style: italic; color: var(--tp-light); }
+
+.hero__subtitle {
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-style: italic;
+  line-height: 1.24;
+  margin-top: var(--sp-1);
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.28;
+  max-width: 22ch;
+}
+
+.section-head { margin-bottom: var(--sp-3); max-width: 40ch; }
+.section-head--tight { margin-bottom: var(--sp-2); }
+
+p, li { font-size: 1rem; }
+@media (min-width: 640px) { p, li { font-size: 1.0625rem; } }
+
+.eyebrow {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tp-slate);
+  margin-bottom: var(--sp-1);
+}
+.eyebrow--inverse { color: var(--tp-light); opacity: 0.72; }
+
+.disclaimer { font-size: 0.75rem; line-height: 1.4; color: var(--tp-warm-gray); }
+
+/* =========================================================
+   LAYOUT PRIMITIVES
+   ========================================================= */
+section { position: relative; overflow: clip; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.9em 1.8em;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s var(--ease), background-color 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--tp-white); color: var(--tp-green-dark); }
+.btn--primary:hover { background: var(--tp-light); }
+.btn--ghost { border-color: currentColor; color: inherit; }
+.btn--ghost:hover { background: rgba(244,243,243,0.12); }
+.btn--outline { border-color: var(--tp-green-dark); color: var(--tp-green-dark); }
+.btn--outline:hover { background: var(--tp-green-dark); color: var(--tp-white); }
+.btn--large { padding: 1.1em 2.4em; font-size: 1.125rem; }
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================================
+   ROOT-LINE GRAPHIC (signature element)
+   ========================================================= */
+.root-graphic { width: 100%; height: 100%; }
+.root-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  opacity: 0.55;
+}
+.root-line--main { opacity: 0.85; stroke-width: 2; }
+
+.leaf-scatter { position: absolute; pointer-events: none; }
+.leaf { position: absolute; fill: currentColor; }
+.leaf-scatter--hero { top: 6%; right: 5%; width: 160px; height: 120px; color: var(--tp-green); opacity: 0.5; }
+.leaf--1 { width: 34px; top: 0; right: 0; }
+.leaf--2 { width: 26px; top: 22px; right: 34px; opacity: 0.85; }
+.leaf--3 { width: 18px; top: 44px; right: 60px; opacity: 0.65; transform: rotate(18deg); }
+.leaf--4 { width: 12px; top: 60px; right: 82px; opacity: 0.4; transform: rotate(30deg); }
+
+.watermark {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(6rem, 26vw, 22rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--tp-white);
+  opacity: 0.05;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+.watermark--inverse { color: var(--tp-white); opacity: 0.06; }
+
+/* =========================================================
+   HEADER / NAV
+   ========================================================= */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--tp-white);
+  border-bottom: 1px solid rgba(28,36,46,0.08);
+}
+.site-header__inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: var(--sp-1) var(--pad-section-x);
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700; font-size: 1.05rem; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--tp-green-dark);
+}
+.logo__accent { color: var(--tp-green-dark); font-style: italic; }
+.logo--footer { color: var(--tp-white); }
+.logo--footer .logo__accent { color: var(--tp-light); font-style: italic; }
+
+.nav__list {
+  display: flex; align-items: center; gap: var(--sp-2);
+  font-size: 0.9375rem;
+}
+.nav__list a { color: var(--tp-slate); transition: color 0.2s var(--ease); }
+.nav__list a:hover { color: var(--tp-green-dark); }
+.nav__cta {
+  background: var(--tp-green-dark); color: var(--tp-white) !important;
+  padding: 0.55em 1.3em; border-radius: var(--radius-pill);
+}
+.nav__cta:hover { background: var(--tp-slate) !important; }
+
+.nav__toggle {
+  display: none; flex-direction: column; gap: 5px;
+  width: 28px; padding: 4px;
+}
+.nav__toggle span { display: block; height: 2px; background: var(--tp-graphite); border-radius: 2px; }
+
+@media (max-width: 860px) {
+  .nav__toggle { display: flex; }
+  .nav__list {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: flex-start; gap: var(--sp-1);
+    background: var(--tp-white);
+    padding: var(--sp-2) var(--pad-section-x);
+    border-bottom: 1px solid rgba(28,36,46,0.08);
+    display: none;
+  }
+  .nav__list.is-open { display: flex; }
+  .nav__cta { align-self: flex-start; }
+}
+
+/* =========================================================
+   1. HERO — арка/купол
+   ========================================================= */
+.hero {
+  background: var(--tp-green-dark);
+  color: var(--tp-white);
+  padding: var(--sp-4) var(--pad-section-x) calc(var(--sp-4) + 40px);
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+}
+.hero__atmosphere {
+  position: absolute; inset: 0; z-index: -1;
+  color: var(--tp-sage);
+}
+.hero__content {
+  position: relative; z-index: 2;
+  max-width: 720px;
+}
+.hero__body {
+  margin-top: var(--sp-1);
+  max-width: 40ch;
+  color: var(--tp-light);
+}
+.hero__actions {
+  display: flex; flex-wrap: wrap; gap: var(--sp-1);
+  margin-top: var(--sp-2);
+}
+.hero__aside {
+  margin-top: var(--sp-3);
+  font-size: 1.0625rem;
+  color: var(--tp-light);
+  opacity: 0.8;
+}
+
+.hero__dome {
+  position: absolute;
+  bottom: -1px; left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 90px;
+  background: var(--tp-white);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .hero { min-height: auto; padding-top: calc(var(--sp-4) + 40px); }
+  .hero__dome { height: 48px; }
+}
+
+/* =========================================================
+   TICKER — бегущая строка (транзит между секциями)
+   ========================================================= */
+.ticker {
+  overflow: hidden;
+  padding: var(--sp-1) 0;
+  position: relative;
+}
+.ticker--a { background: var(--tp-green); color: var(--tp-white); }
+.ticker--b { background: var(--tp-sand); color: var(--tp-graphite); }
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  gap: 3.5rem;
+  white-space: nowrap;
+  animation: ticker 32s linear infinite;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ticker--b .ticker__track { text-transform: none; font-style: italic; letter-spacing: 0.01em; }
+.ticker__track span { flex: 0 0 auto; }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; }
+  .ticker { overflow-x: auto; }
+}
+
+/* =========================================================
+   2. МАНИФЕСТ — поле воздуха, slate
+   ========================================================= */
+.manifesto {
+  background: var(--tp-slate);
+  color: var(--tp-white);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  text-align: left;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.manifesto__quote {
+  font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+  font-style: italic;
+  line-height: 1.3;
+  max-width: 20ch;
+}
+.manifesto__quote em { color: var(--tp-green); }
+.manifesto__body {
+  margin-top: var(--sp-2);
+  max-width: 40ch;
+  color: var(--tp-light);
+  margin-left: auto;
+}
+
+@media (min-width: 860px) {
+  .manifesto {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--sp-4);
+    align-items: start;
+  }
+  .manifesto__body { margin-top: var(--sp-1); }
+}
+
+/* =========================================================
+   3. КОРНИ ТЕПЛИЦЫ — зигзаг
+   ========================================================= */
+.roots {
+  background: var(--tp-white);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.pillars {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+@media (min-width: 860px) {
+  .pillars { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); }
+  .pillar--i { margin-top: var(--sp-3); }
+  .pillar--p { margin-top: calc(var(--sp-3) * 2); }
+}
+
+.pillar__mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: var(--mark-size); height: var(--mark-size);
+  border: 3px solid var(--tp-green);
+  border-radius: 50%;
+  font-size: 1.75rem;
+  color: var(--tp-green-dark);
+  margin-bottom: var(--sp-1);
+}
+.pillar__title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: var(--sp-1);
+  max-width: 22ch;
+}
+.pillar__body { max-width: 38ch; color: var(--tp-slate); }
+
+/* =========================================================
+   4. С ЧЕМ ПРИХОДЯТ — pull quotes, асимметрия
+   ========================================================= */
+.needs {
+  background: var(--tp-cream);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.needs__list { display: flex; flex-direction: column; gap: var(--sp-2); }
+.needs__item {
+  font-size: clamp(1.15rem, 2.6vw, 1.875rem);
+  font-style: italic;
+  line-height: 1.35;
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid rgba(28,36,46,0.12);
+  max-width: 34ch;
+}
+.needs__item--in-2 { margin-left: clamp(0px, 8vw, 96px); }
+.needs__item--in-3 { margin-left: clamp(0px, 16vw, 180px); }
+
+.needs__footer {
+  margin-top: var(--sp-3);
+  color: var(--tp-slate);
+  max-width: 40ch;
+  margin-left: auto;
+}
+
+/* =========================================================
+   5. КАК РАБОТАЕТ — таймлайн
+   ========================================================= */
+.format {
+  background: var(--tp-light);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--sp-4);
+}
+.format__body { margin-top: var(--sp-1); max-width: 40ch; color: var(--tp-slate); }
+.format__note {
+  margin-top: var(--sp-2);
+  background: var(--tp-green-dark);
+  color: var(--tp-white);
+  padding: var(--sp-2);
+  border-radius: var(--radius-card);
+  max-width: 40ch;
+  font-size: 0.9375rem;
+}
+
+.timeline { position: relative; padding-top: var(--sp-2); color: var(--tp-sand); }
+.root-graphic--timeline { width: 100%; height: 40px; }
+.timeline__nodes {
+  display: flex; justify-content: space-between; gap: var(--sp-1);
+  margin-top: -14px;
+  font-size: 0.8125rem;
+  color: var(--tp-graphite);
+  text-align: center;
+}
+.timeline__node { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.timeline__node small { color: var(--tp-slate); font-style: italic; }
+.timeline__dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--tp-warm-gray);
+  margin-bottom: var(--sp-1);
+}
+.timeline__node--meeting .timeline__dot { background: var(--tp-green); width: 16px; height: 16px; }
+.timeline__node--meeting { font-weight: 700; }
+
+@media (min-width: 860px) {
+  .format { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
+}
+@media (max-width: 640px) {
+  .timeline__nodes { flex-wrap: wrap; }
+  .timeline__node { flex: 0 0 30%; margin-bottom: var(--sp-2); }
+}
+
+/* =========================================================
+   6. СЕМЕНА И ВЫЗРЕВАНИЕ — диагональ
+   ========================================================= */
+.seeds {
+  background: var(--tp-dusty-rose);
+  padding: var(--pad-section-y) var(--pad-section-x);
+}
+.seeds__card {
+  max-width: 780px;
+  margin-left: clamp(0px, 6vw, 120px);
+  background: var(--tp-green-dark);
+  color: var(--tp-white);
+  padding: var(--sp-3);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+.seeds__quote {
+  display: block;
+  font-size: clamp(1.25rem, 2.6vw, 1.875rem);
+  font-style: italic;
+  line-height: 1.4;
+}
+.seeds__quote footer {
+  margin-top: var(--sp-1);
+  font-size: 0.9375rem;
+  font-style: normal;
+  color: var(--tp-light);
+  opacity: 0.75;
+}
+.seeds__body { margin-top: var(--sp-2); max-width: 40ch; color: var(--tp-light); }
+
+/* =========================================================
+   7. КОМУ ПОДХОДИТ — верх-низ
+   ========================================================= */
+.fit {
+  background: var(--tp-white);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.fit__statement {
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+  line-height: 1.32;
+  max-width: 26ch;
+  margin-bottom: var(--sp-4);
+}
+.fit__statement em { font-style: italic; color: var(--tp-green-dark); }
+
+.fit__grid { display: grid; gap: var(--sp-3); }
+@media (min-width: 760px) { .fit__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-2); } }
+
+.fit__col { padding: var(--sp-2); border-radius: var(--radius-card); }
+.fit__col--not { background: var(--tp-cream); }
+.fit__col--is { background: var(--tp-light); }
+.fit__col ul { display: flex; flex-direction: column; gap: var(--sp-1); }
+.fit__col li { color: var(--tp-slate); max-width: 36ch; }
+.fit__col--is li { color: var(--tp-graphite); }
+
+/* =========================================================
+   8. ТАРИФЫ — плитка неравного веса
+   ========================================================= */
+.pricing {
+  background: var(--tp-cream);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.plans {
+  display: grid;
+  gap: var(--sp-2);
+}
+@media (min-width: 780px) {
+  .plans { grid-template-columns: 0.8fr 1.2fr; align-items: stretch; }
+}
+
+.plan {
+  background: var(--tp-white);
+  border-radius: var(--radius-card);
+  padding: var(--sp-3);
+  display: flex; flex-direction: column;
+}
+.plan--tsvetenie {
+  background: var(--tp-green-dark);
+  color: var(--tp-white);
+  box-shadow: var(--shadow-soft);
+}
+.plan__badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--tp-light);
+  color: var(--tp-green-dark);
+  font-size: 0.8125rem;
+  font-style: italic;
+  padding: 0.4em 1em;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--sp-1);
+}
+.plan__name { font-size: 1.75rem; font-weight: 700; }
+.plan__price { font-size: clamp(2rem, 4vw, 2.75rem); margin-top: var(--sp-1); }
+.plan__price span { font-size: 1rem; font-weight: 400; opacity: 0.7; }
+.plan__list { display: flex; flex-direction: column; gap: var(--sp-1); margin: var(--sp-2) 0; flex: 1; }
+.plan--rostok .plan__list li { color: var(--tp-slate); }
+.plan--tsvetenie .plan__list li { color: var(--tp-light); }
+.plan .btn { align-self: flex-start; }
+
+.pricing__note {
+  margin-top: var(--sp-3);
+  max-width: 40ch;
+  color: var(--tp-slate);
+  font-size: 0.9375rem;
+}
+
+/* =========================================================
+   9. ОСНОВАТЕЛЬ
+   ========================================================= */
+.founder {
+  background: var(--tp-light);
+  padding: var(--pad-section-y) var(--pad-section-x);
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--sp-3);
+  align-items: center;
+}
+@media (min-width: 780px) {
+  .founder { grid-template-columns: 0.7fr 1.3fr; gap: var(--sp-4); }
+}
+
+.founder__portrait {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-pill) var(--radius-pill) var(--radius-card) var(--radius-card);
+  background: var(--tp-sand);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  color: var(--tp-white);
+  font-style: italic;
+  font-size: 0.9375rem;
+  max-width: 320px;
+}
+
+.founder__body { margin-top: var(--sp-1); max-width: 40ch; color: var(--tp-slate); }
+.founder__quote {
+  display: block;
+  margin-top: var(--sp-2);
+  padding-left: var(--sp-2);
+  border-left: 3px solid var(--tp-green);
+  font-style: italic;
+  font-size: 1.125rem;
+  max-width: 40ch;
+  color: var(--tp-graphite);
+}
+
+/* =========================================================
+   10. ФИНАЛ — купол bookend
+   ========================================================= */
+.closing {
+  background: var(--tp-green-dark);
+  color: var(--tp-white);
+  padding: calc(var(--pad-section-y) + 20px) var(--pad-section-x);
+  text-align: center;
+  isolation: isolate;
+}
+.closing__content { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+.closing__quote {
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+  line-height: 1.35;
+  margin-top: var(--sp-1);
+}
+.closing__quote em { font-style: italic; color: var(--tp-green); }
+.closing .btn { margin-top: var(--sp-3); }
+
+.closing__dome {
+  position: absolute;
+  top: -1px; left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 90px;
+  background: var(--tp-cream);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  z-index: 0;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  background: var(--tp-green-dark);
+  color: var(--tp-light);
+  padding: var(--sp-3) var(--pad-section-x) var(--sp-2);
+}
+.site-footer__inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(244,243,243,0.15);
+  padding-top: var(--sp-2);
+}
+.site-footer__links { display: flex; gap: var(--sp-2); font-size: 0.9375rem; }
+.site-footer__links a:hover { color: var(--tp-white); }
+.site-footer .disclaimer { width: 100%; margin-top: var(--sp-1); }
