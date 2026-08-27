@@ -97,6 +97,7 @@ section { position: relative; }
   font-weight: 700;
   line-height: 1.22;
   max-width: 22ch;
+  text-wrap: balance;
 }
 .section-head { margin-bottom: var(--sp-3); max-width: 46ch; }
 .section-head--tight { margin-bottom: var(--sp-2); }
@@ -192,6 +193,7 @@ section { position: relative; }
   color: var(--tp-light);
   max-width: 34ch;
   margin-bottom: var(--sp-1);
+  text-wrap: balance;
 }
 .hero__headline-big {
   display: block;
@@ -268,7 +270,7 @@ section { position: relative; }
 .stat--b { background: var(--tp-dusty-rose); }
 .stat--c { background: var(--tp-sand); color: var(--tp-graphite); }
 .stat--d { background: var(--tp-green-dark); color: var(--tp-white); }
-.stat__num { font-size: clamp(1.75rem, 3.4vw, 2.75rem); font-weight: 700; }
+.stat__num { font-size: clamp(1.75rem, 3.4vw, 2.75rem); font-weight: 700; font-variant-numeric: tabular-nums; }
 .stat__label { font-size: 0.875rem; max-width: 20ch; }
 
 @media (max-width: 780px) {
@@ -324,7 +326,7 @@ section { position: relative; }
   font-size: 5rem; font-weight: 700; line-height: 1;
   color: var(--tp-warm-gray); opacity: 0.5; z-index: 0;
 }
-.fact__title { position: relative; z-index: 1; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.4em; }
+.fact__title { position: relative; z-index: 1; font-size: 1.125rem; font-weight: 700; margin-bottom: 0.4em; text-wrap: balance; }
 .fact__body { position: relative; z-index: 1; color: var(--tp-slate); max-width: 28ch; }
 
 /* =========================================================
@@ -346,7 +348,7 @@ section { position: relative; }
   font-size: 1.375rem; font-weight: 700;
   border: 2px solid currentColor;
 }
-.tile__title { font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 700; max-width: 20ch; }
+.tile__title { font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 700; max-width: 20ch; text-wrap: balance; }
 .tile--k .tile__body { max-width: 40ch; color: var(--tp-light); }
 .tile--i .tile__body, .tile--p .tile__body { max-width: 30ch; color: var(--tp-slate); }
 
@@ -385,7 +387,7 @@ section { position: relative; }
 .product__badge { font-size: 0.8125rem; font-style: italic; color: var(--tp-sage); }
 .product--featured .product__badge { color: var(--tp-light); }
 .product__name { font-size: 1.5rem; font-weight: 700; }
-.product__price { font-size: 1.875rem; font-weight: 700; }
+.product__price { font-size: 1.875rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .product__price span { font-size: 0.9375rem; font-weight: 400; opacity: 0.7; }
 .product__list { display: flex; flex-direction: column; gap: 0.4em; margin: 0.5em 0 var(--sp-1); }
 .product--featured .product__list li { color: var(--tp-light); }
@@ -411,13 +413,13 @@ section { position: relative; }
 }
 .ctile { border-radius: var(--radius-lg); padding: var(--sp-2); display: flex; flex-direction: column; justify-content: center; gap: var(--sp-1); }
 .ctile--quote { background: var(--tp-green-dark); color: var(--tp-white); }
-.ctile__quote { font-style: italic; font-size: clamp(1.125rem, 1.8vw, 1.5rem); line-height: 1.4; }
+.ctile__quote { font-style: italic; font-size: clamp(1.125rem, 1.8vw, 1.5rem); line-height: 1.4; text-wrap: balance; }
 .ctile__quote footer { margin-top: var(--sp-1); font-style: normal; font-size: 0.9375rem; opacity: 0.75; }
 .ctile--portrait { background: var(--tp-dusty-rose); color: var(--tp-graphite); text-align: center; align-items: center; aspect-ratio: 1; font-style: italic; font-size: 0.875rem; }
 .ctile--bio { background: var(--tp-cream); }
 .ctile__body { color: var(--tp-slate); }
 .ctile--cta { background: var(--tp-green-dark); color: var(--tp-white); flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-1); }
-.ctile__cta-title { font-size: 1.25rem; font-weight: 700; max-width: 24ch; }
+.ctile__cta-title { font-size: 1.25rem; font-weight: 700; max-width: 24ch; text-wrap: balance; }
 .ctile__link { font-weight: 700; border-bottom: 2px solid currentColor; padding-bottom: 2px; }
 
 .vk-bar {
