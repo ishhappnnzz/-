@@ -33,6 +33,7 @@
   --shadow-soft: 0 8px 40px rgba(28, 36, 46, 0.12);
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-grow: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* =========================================================
@@ -44,8 +45,10 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
     scroll-behavior: auto !important;
   }
 }
@@ -93,8 +96,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; }
 }
 
 .hero__title {
-  font-size: clamp(2.4rem, 6vw, 5.5rem);
-  line-height: 1.12;
+  font-size: clamp(2.6rem, 6.6vw, 6.25rem);
+  line-height: 1.1;
   letter-spacing: -0.01em;
   max-width: 16ch;
   text-wrap: balance;
@@ -175,6 +178,33 @@ section { position: relative; overflow: clip; }
   opacity: 0.55;
 }
 .root-line--main { opacity: 0.85; stroke-width: 2; }
+
+@keyframes root-draw {
+  from { stroke-dashoffset: 1400; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* hero: roots grow in on load */
+.hero .root-line {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: root-draw 2.2s var(--ease-grow) forwards;
+}
+.hero .root-line--main { animation-delay: 0.1s; }
+.hero .root-line:nth-of-type(2) { animation-delay: 0.5s; }
+.hero .root-line:nth-of-type(3) { animation-delay: 0.7s; }
+.hero .root-line:nth-of-type(4) { animation-delay: 0.9s; }
+.hero .root-line:nth-of-type(5) { animation-delay: 0.6s; }
+.hero .root-line:nth-of-type(6) { animation-delay: 1s; }
+
+/* timeline: root line redraws when the format section scrolls in */
+.timeline .root-line {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+}
+.timeline.is-visible .root-line {
+  animation: root-draw 1.4s var(--ease-grow) 0.2s forwards;
+}
 
 .leaf-scatter { position: absolute; pointer-events: none; }
 .leaf { position: absolute; fill: currentColor; }
@@ -274,6 +304,19 @@ section { position: relative; overflow: clip; }
   position: relative; z-index: 2;
   max-width: 720px;
 }
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero__content > * {
+  animation: hero-rise 0.9s var(--ease-grow) both;
+}
+.hero__content > .eyebrow { animation-delay: 0.05s; }
+.hero__content > .hero__title { animation-delay: 0.15s; }
+.hero__content > .hero__subtitle { animation-delay: 0.4s; }
+.hero__content > .hero__body { animation-delay: 0.5s; }
+.hero__content > .hero__actions { animation-delay: 0.6s; }
+.hero__content > .hero__aside { animation-delay: 0.75s; }
 .hero__body {
   margin-top: var(--sp-1);
   max-width: 40ch;
@@ -389,6 +432,9 @@ section { position: relative; overflow: clip; }
   display: grid;
   gap: var(--sp-3);
 }
+.pillars .pillar:nth-child(1) { transition-delay: 0s; }
+.pillars .pillar:nth-child(2) { transition-delay: 0.12s; }
+.pillars .pillar:nth-child(3) { transition-delay: 0.24s; }
 
 @media (min-width: 860px) {
   .pillars { grid-template-columns: repeat(3, 1fr); gap: var(--sp-2); }
@@ -424,6 +470,11 @@ section { position: relative; overflow: clip; }
   margin: 0 auto;
 }
 .needs__list { display: flex; flex-direction: column; gap: var(--sp-2); }
+.needs__list .needs__item:nth-child(1) { transition-delay: 0s; }
+.needs__list .needs__item:nth-child(2) { transition-delay: 0.1s; }
+.needs__list .needs__item:nth-child(3) { transition-delay: 0.2s; }
+.needs__list .needs__item:nth-child(4) { transition-delay: 0.3s; }
+.needs__list .needs__item:nth-child(5) { transition-delay: 0.4s; }
 .needs__item {
   position: relative;
   font-size: clamp(1.15rem, 2.6vw, 1.875rem);
@@ -551,6 +602,8 @@ section { position: relative; overflow: clip; }
 .fit__statement em { font-style: italic; color: var(--tp-green-dark); }
 
 .fit__grid { display: grid; gap: var(--sp-3); }
+.fit__grid .fit__col:nth-child(1) { transition-delay: 0s; }
+.fit__grid .fit__col:nth-child(2) { transition-delay: 0.15s; }
 @media (min-width: 760px) { .fit__grid { grid-template-columns: 1fr 1fr; gap: var(--sp-2); } }
 
 .fit__col { padding: var(--sp-2); border-radius: var(--radius-card); }
@@ -573,6 +626,8 @@ section { position: relative; overflow: clip; }
   display: grid;
   gap: var(--sp-2);
 }
+.plans .plan:nth-child(1) { transition-delay: 0s; }
+.plans .plan:nth-child(2) { transition-delay: 0.15s; }
 @media (min-width: 780px) {
   .plans { grid-template-columns: 0.8fr 1.2fr; align-items: stretch; }
 }
