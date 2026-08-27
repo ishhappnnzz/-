@@ -57,25 +57,16 @@
         <span class="hero__headline-big">корневые<br>компетенции</span>
       </h1>
       <p class="hero__tags">
-        <span>Культура консультирования</span>
-        <span>Профессиональная идентичность</span>
-        <span>Терапевтическое присутствие</span>
+        <span>Культура</span>
+        <span>Идентичность</span>
+        <span>Присутствие</span>
       </p>
     </div>
 
-    <a class="hero__card" href="#roots">
-      <span class="hero__card-mark">КИП</span>
-      <span class="hero__card-text">Что это такое</span>
-      <span class="hero__card-btn">Смотреть <span aria-hidden="true">↗</span></span>
-    </a>
   </section>
 
-  <!-- ТИКЕР — бегущая строка -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>НЕ КУРС</span><span>·</span><span>НЕ СУПЕРВИЗИЯ</span><span>·</span><span>НЕ КЛУБ ПОДДЕРЖКИ</span><span>·</span><span>У ТЕБЯ УЖЕ ДОСТАТОЧНО</span><span>·</span>
-      <span>НЕ КУРС</span><span>·</span><span>НЕ СУПЕРВИЗИЯ</span><span>·</span><span>НЕ КЛУБ ПОДДЕРЖКИ</span><span>·</span><span>У ТЕБЯ УЖЕ ДОСТАТОЧНО</span><span>·</span>
-    </div>
+  <div class="hero-badge-wrap">
+    <a class="hero-badge glass" href="#roots" aria-label="КИП — что это такое">КИП</a>
   </div>
 
   <!-- 2. СТАТ-СТРОКА — цветные чипы -->
@@ -158,7 +149,7 @@
     <div class="mosaic__grid">
       <article class="tile tile--k reveal">
         <span class="tile__mark">К</span>
-        <h3 class="tile__title">Культура консультирования</h3>
+        <h3 class="tile__title">Культура</h3>
         <p class="tile__body">
           Как вы работаете: как берёте деньги, как отказываете, как
           завершаете, что делать с сообщением в 23:40. Этому не учат ни на
@@ -167,12 +158,12 @@
       </article>
       <article class="tile tile--i reveal">
         <span class="tile__mark">И</span>
-        <h3 class="tile__title">Профессиональная идентичность</h3>
+        <h3 class="tile__title">Идентичность</h3>
         <p class="tile__body">Свой почерк уже есть в ваших интервенциях. Его не выбирают — его перестают стесняться.</p>
       </article>
       <article class="tile tile--p reveal">
         <span class="tile__mark">П</span>
-        <h3 class="tile__title">Терапевтическое присутствие</h3>
+        <h3 class="tile__title">Присутствие</h3>
         <p class="tile__body">Быть здесь, а не за стеклом. Это навык — значит, у него есть первый шаг.</p>
       </article>
     </div>
@@ -191,14 +182,6 @@
       <li class="tag tag--b reveal">понять, где заканчивается терапевт и начинается просто живой человек</li>
     </ul>
   </section>
-
-  <!-- ТИКЕР 2 -->
-  <div class="ticker ticker--warm" aria-hidden="true">
-    <div class="ticker__track">
-      <span>ПОЧВА</span><span>ПРОРАСТАНИЕ</span><span>ВЫЗРЕВАНИЕ</span><span>СЕЗОН</span><span>УКОРЕНЕНИЕ</span><span>НОРМА</span>
-      <span>ПОЧВА</span><span>ПРОРАСТАНИЕ</span><span>ВЫЗРЕВАНИЕ</span><span>СЕЗОН</span><span>УКОРЕНЕНИЕ</span><span>НОРМА</span>
-    </div>
-  </div>
 
   <!-- 7. ТАРИФЫ — карточки товара -->
   <section class="pricing" id="pricing">
@@ -245,31 +228,33 @@
     </p>
   </section>
 
-  <!-- 8. ОСНОВАТЕЛЬ + ФИНАЛ — коллаж -->
-  <section class="collage" id="founder">
-    <article class="ctile ctile--quote reveal">
-      <p class="eyebrow eyebrow--inverse">ОСНОВАТЕЛЬ</p>
-      <blockquote class="ctile__quote">
-        Я беру сложный материал, много читаю, сопоставляю со своей
-        практикой, отбрасываю лишнее. Остаётся выжимка, которую можно
-        унести в работу.
+  <!-- 8. ОСНОВАТЕЛЬ + ФИНАЛ — фото Яны с наложением стекла -->
+  <section class="finale" id="founder">
+    <div class="finale__photo reveal">
+      <div class="finale__photo-frame">
+        <img src="img/yana.jpg" alt="Яна Бузько — практикующий психолог, основательница «Теплицы PSY»">
+      </div>
+      <blockquote class="finale__glass glass">
+        <p class="eyebrow">ОСНОВАТЕЛЬ</p>
+        <p class="finale__quote">
+          Я беру сложный материал, много читаю, сопоставляю со своей
+          практикой, отбрасываю лишнее. Остаётся выжимка, которую можно
+          унести в работу.
+        </p>
         <footer>— Яна Бузько</footer>
       </blockquote>
-    </article>
-    <article class="ctile ctile--portrait reveal" aria-hidden="true">
-      <span>фото:<br>Яна Бузько</span>
-    </article>
-    <article class="ctile ctile--bio reveal">
-      <p class="ctile__body">
+    </div>
+    <div class="finale__side">
+      <p class="finale__bio reveal">
         Практикующий психолог, 7 лет частной практики. До психологии
         проектировала обучающие программы для сотрудников крупных
         компаний.
       </p>
-    </article>
-    <article class="ctile ctile--cta reveal" id="start">
-      <p class="ctile__cta-title">Корни растут медленно.<br>Начните с первого шага.</p>
-      <a class="ctile__link" href="#pricing">Читать первый материал <span aria-hidden="true">→</span></a>
-    </article>
+      <div class="finale__cta reveal" id="start">
+        <p class="finale__cta-title">Корни растут медленно.<br>Начните с первого шага.</p>
+        <a class="ctile__link" href="#pricing">Читать первый материал <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </section>
 
   <div class="vk-bar reveal">

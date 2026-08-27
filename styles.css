@@ -350,39 +350,6 @@ section { position: relative; overflow: clip; }
 }
 
 /* =========================================================
-   TICKER — бегущая строка (транзит между секциями)
-   ========================================================= */
-.ticker {
-  overflow: hidden;
-  padding: var(--sp-1) 0;
-  position: relative;
-}
-.ticker--a { background: var(--tp-green); color: var(--tp-white); }
-.ticker--b { background: var(--tp-sand); color: var(--tp-graphite); }
-
-.ticker__track {
-  display: flex;
-  width: max-content;
-  gap: 3.5rem;
-  white-space: nowrap;
-  animation: ticker 32s linear infinite;
-  font-size: 0.875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.ticker--b .ticker__track { text-transform: none; font-style: italic; letter-spacing: 0.01em; }
-.ticker__track span { flex: 0 0 auto; }
-
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ticker__track { animation: none; }
-  .ticker { overflow-x: auto; }
-}
-
-/* =========================================================
    2. МАНИФЕСТ — поле воздуха, slate
    ========================================================= */
 .manifesto {
@@ -689,12 +656,14 @@ section { position: relative; overflow: clip; }
   aspect-ratio: 3 / 4;
   border-radius: var(--radius-pill) var(--radius-pill) var(--radius-card) var(--radius-card);
   background: var(--tp-sand);
-  display: flex; align-items: center; justify-content: center;
-  text-align: center;
-  color: var(--tp-white);
-  font-style: italic;
-  font-size: 0.9375rem;
+  overflow: hidden;
   max-width: 320px;
+}
+.founder__portrait img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .founder__body { margin-top: var(--sp-1); max-width: 40ch; color: var(--tp-slate); }
