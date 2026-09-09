@@ -72,29 +72,6 @@
   .pill-btn.outline:hover{background:rgba(27,79,63,.06);}
   .pill-btn.on-dark.outline{color:var(--tp-white);box-shadow:inset 0 0 0 1.5px rgba(244,243,243,.6);}
   .pill-btn.on-dark.outline:hover{background:rgba(244,243,243,.1);}
-  .pill-btn.on-dark.outline.cta-glow{
-    font-size:1.3rem;color:#FFFFFF;
-    box-shadow:inset 0 0 0 1.5px rgba(126,209,170,.8);
-    text-shadow:0 0 2px rgba(126,209,170,.75),0 0 6px rgba(65,136,107,.5),0 0 14px rgba(65,136,107,.3);
-  }
-  .pill-btn.on-dark.outline.cta-glow:hover{
-    box-shadow:inset 0 0 0 1.5px rgba(126,209,170,1);
-    text-shadow:0 0 2px rgba(126,209,170,.9),0 0 8px rgba(65,136,107,.65),0 0 18px rgba(65,136,107,.4);
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .pill-btn.on-dark.outline.cta-glow{animation:cta-pulse 2.4s ease-in-out infinite;}
-    .pill-btn.on-dark.outline.cta-glow:hover{animation-play-state:paused;}
-  }
-  @keyframes cta-pulse{
-    0%,100%{
-      box-shadow:inset 0 0 0 1.5px rgba(126,209,170,.8);
-      text-shadow:0 0 2px rgba(126,209,170,.75),0 0 6px rgba(65,136,107,.5),0 0 14px rgba(65,136,107,.3);
-    }
-    50%{
-      box-shadow:inset 0 0 0 1.5px rgba(126,209,170,1);
-      text-shadow:0 0 2px rgba(126,209,170,1),0 0 11px rgba(65,136,107,.8),0 0 28px rgba(65,136,107,.55);
-    }
-  }
 
   /* ---------- accessibility: visible keyboard focus on every interactive element ---------- */
   a:focus-visible, button:focus-visible{
@@ -224,13 +201,7 @@
   .preview-materials{padding-top:clamp(48px,6.4vw,72px);padding-bottom:clamp(48px,6.4vw,72px);}
   .preview-materials-copy{max-width:560px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px;}
   .preview-materials-copy p{font-size:1.1rem;line-height:1.55;color:var(--tp-graphite);margin:0;}
-  .pen-underline{position:relative;white-space:nowrap;padding-bottom:.12em;}
-  .pen-underline::after{
-    content:'';position:absolute;left:-2%;right:-3%;bottom:-.08em;height:.32em;
-    background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20300%2030%22%3E%3Cpath%20d%3D%22M4%2C23%20C55%2C27%2095%2C15%20148%2C18%20C205%2C21%20255%2C9%20296%2C7%22%20fill%3D%22none%22%20stroke%3D%22%2341886B%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-    background-repeat:no-repeat;background-size:100% 100%;
-    pointer-events:none;
-  }
+  .pen-underline{color:inherit;text-decoration:underline;text-decoration-color:var(--tp-green);text-decoration-thickness:2px;text-underline-offset:.18em;}
   .block.dark{background:var(--tp-green-dark);color:var(--tp-white);}
   .section-head{display:flex;flex-direction:column;gap:14px;max-width:680px;margin-bottom:clamp(32px,5vw,56px);}
   .section-head h2{font-weight:700;font-size:clamp(2.1rem, 4.6vw, 3.6rem);letter-spacing:-.015em;}
@@ -299,7 +270,7 @@
     position:absolute;right:-14%;top:-26%;width:50%;aspect-ratio:1;border-radius:50%;
     background:var(--tp-warm-gray);opacity:.2;
   }
-  .fishka-statement{position:relative;z-index:2;max-width:min(680px,90%);padding-bottom:clamp(28px,4vw,44px);}
+  .fishka-statement{position:relative;z-index:2;max-width:min(680px,90%);padding-bottom:clamp(14px,2vw,20px);}
   .fishka-statement p{
     font-style:italic;
     font-size:clamp(1.6rem,3.4vw,2.5rem);
@@ -308,12 +279,12 @@
     margin:0;
     text-wrap:balance;
   }
-  .fishka-panel{position:relative;z-index:2;max-width:900px;margin-top:clamp(8px,1.4vw,16px);}
-  .fishka-panel p{color:var(--tp-slate);font-style:italic;font-size:.95rem;max-width:56ch;margin:0 0 16px 0;}
+  .fishka-panel{position:relative;z-index:2;max-width:900px;margin-top:0;}
+  .fishka-panel p{color:var(--tp-slate);font-style:italic;font-size:1.2rem;max-width:56ch;margin:0 0 clamp(20px,3vw,28px) 0;}
   .fishka-panel p:last-child{margin-bottom:0;}
 
   /* staircase "Как" rows */
-  .fishka-stairs{display:flex;flex-direction:column;gap:16px;margin-top:clamp(32px,4.6vw,48px);position:relative;z-index:2;}
+  .fishka-stairs{display:flex;flex-direction:column;gap:16px;margin-top:clamp(8px,1.4vw,16px);position:relative;z-index:2;}
   .fishka-stairs .stair{
     background:var(--tp-light);
     border-radius:20px;
@@ -388,6 +359,7 @@
     background-size:260px 260px;
   }
   .how .scrim-wrap{position:relative;z-index:2;background:rgba(16,22,19,.82);padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,9vw,120px);}
+  .how .section-head{max-width:920px;}
   .how .section-head p{color:rgba(244,243,243,.78);}
   .how-ring{position:absolute;pointer-events:none;border-radius:50%;border:1px solid rgba(244,243,243,.14);}
   .how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;position:relative;z-index:2;}
@@ -468,7 +440,9 @@
   .price-card li:last-child{border-bottom:none;padding-bottom:0;}
   .price-card.tier-a li{color:var(--tp-graphite);}
   .price-card.tier-b li{color:rgba(244,243,243,.94);}
+  .footnote-group{display:flex;flex-direction:column;gap:6px;}
   .price-card .footnote{font-size:.8125rem;}
+  .price-card .footnote-small{font-size:.72rem;}
   .price-card.tier-a .footnote{color:var(--tp-slate);}
   .price-card.tier-b .footnote{color:rgba(244,243,243,.68);}
   .price-card .pill-btn{align-self:flex-start;margin-top:auto;}
@@ -638,7 +612,7 @@
     <div class="container content hero-stagger" id="hero-stagger">
       <h1 data-kinetic>«Теплица PSY» - питательная среда для практикующих психологов, где вызревают корневые компетенции</h1>
       <div class="actions">
-        <a class="pill-btn on-dark outline cta-glow" href="https://vk.ru/teplica4psy" target="_blank" rel="noopener">Получить бесплатные материалы</a>
+        <a class="pill-btn final-join" href="https://vk.ru/teplica4psy" target="_blank" rel="noopener">Посмотреть бесплатные материалы</a>
       </div>
     </div>
   </div>
@@ -737,7 +711,7 @@
 <section class="block cream preview-materials" id="preview">
   <div class="container">
     <div class="preview-materials-copy">
-      <p>Необязательно сначала разбираться, подходит ли вам «Теплица». Посмотрите несколько <span class="pen-underline">реальных материалов</span> из Теплицы PSY и составьте собственное впечатление.</p>
+      <p>Посмотрите несколько <span class="pen-underline">реальных материалов</span> из Теплицы PSY.</p>
       <a class="pill-btn" href="https://vk.ru/teplica4psy" target="_blank" rel="noopener">Посмотреть бесплатные материалы</a>
     </div>
   </div>
@@ -751,7 +725,7 @@
       <span class="author-tag">Основатель «Теплицы PSY»</span>
     </div>
     <div class="author-editorial">
-      <p class="author-quote">Я исследую то, что обычно оставляют в области необъяснимого, и нахожу для этого понятные образы и доступные слова</p>
+      <p class="author-quote">А что если профессиональный рост, это не только знания, но и формирование внутренней профессиональной опоры, которая остается независимо от подхода?</p>
       <div class="author-byline">
         <span class="author-name">Яна Бузько</span>
         <span class="author-role">С тщательностью и теплом сделала «Теплицу PSY» для вас</span>
@@ -762,9 +736,9 @@
         <span>10 лет в обучении</span>
       </div>
       <div class="copy">
-        <p>«Теплица PSY» появилась из вопроса, на который я несколько лет искала ответ в собственной практике. А что если профессиональный рост - это не только новые знания, но и формирование внутренней профессиональной опоры, которая остается с нами независимо от метода и подхода?</p>
+        <p>«Теплица PSY» появилась из вопроса, на который я несколько лет искала ответ в собственной практике.</p>
         <p>До психотерапевтической практики я много лет проектировала обучающие программы для сотрудников крупных компаний и научилась одному важному навыку: сложное делать понятным, а большой объем информации превращать в то, чем человек действительно сможет воспользоваться.</p>
-        <p>Уверена, что в Теплице PSY вы найдете язык для того, что раньше называли просто интуицией.</p>
+        <p>Я исследую то, что обычно оставляют в области необъяснимого, и нахожу для этого понятные образы и доступные слова. Уверена, что в Теплице PSY вы найдете язык для того, что раньше называли просто интуицией.</p>
       </div>
     </div>
   </div>
@@ -782,9 +756,14 @@
         <div class="price">1 200 ₽<sup>/ мес</sup></div>
         <ul>
           <li>Все материалы месяца</li>
-          <li>К материалам можно возвращаться по мере появления вопросов в вашей практике</li>
+          <li>Авторские пособия по сложным и актуальным темам</li>
+          <li>Насыщенные, понятные видео-уроки</li>
+          <li>База знаний - к материалам можно возвращаться, когда нужно</li>
         </ul>
-        <span class="footnote">Хорошее начало, для работы в своем темпе</span>
+        <div class="footnote-group">
+          <span class="footnote">Хорошее начало, для работы в своем темпе</span>
+          <span class="footnote footnote-small">* К материалам можно возвращаться по мере появления вопросов в вашей практике</span>
+        </div>
         <a class="pill-btn outline" href="https://vk.ru/market/product/format-rostok-240926445-12717499" target="_blank" rel="noopener">Выбрать Росток</a>
       </div>
       <div class="price-card tier-b">
@@ -835,7 +814,8 @@
   <div class="deco-circle" aria-hidden="true"></div>
   <div class="container">    <div class="final-copy" style="margin-top:20px;">
       <h2>Сильный терапевт</h2>
-      <p>не тот, у кого всегда есть правильный ответ. Это специалист, который постепенно формирует собственную профессиональную опору: способ думать, чувствовать, выдерживать неопределенность и оставаться в контакте с человеком напротив. Для этого мы создали «Теплицу PSY».</p>
+      <p>не тот, у кого всегда есть правильный ответ. Это специалист, который постепенно формирует собственную профессиональную опору: способ думать, чувствовать, выдерживать неопределенность и оставаться в контакте с человеком напротив.</p>
+      <p>Для этого мы создали «Теплицу PSY».</p>
       <div class="actions">
         <a class="pill-btn final-join" href="https://vk.ru/teplica4psy" target="_blank" rel="noopener">Посмотреть бесплатные материалы</a>
       </div>
