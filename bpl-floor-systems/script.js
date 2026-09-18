@@ -149,3 +149,29 @@
     }
   }
 
+  /* Cookie consent banner */
+  var cookieBanner = document.getElementById('cookieBanner');
+  if (cookieBanner) {
+    var COOKIE_KEY = 'bpl_cookie_consent';
+    var hasConsent = false;
+    try { hasConsent = !!localStorage.getItem(COOKIE_KEY); } catch (e) {}
+
+    if (!hasConsent) {
+      cookieBanner.style.display = 'flex';
+      if (reduceMotion) {
+        cookieBanner.classList.add('is-visible');
+      } else {
+        requestAnimationFrame(function(){
+          requestAnimationFrame(function(){ cookieBanner.classList.add('is-visible'); });
+        });
+      }
+    }
+
+    var cookieBannerOk = document.getElementById('cookieBannerOk');
+    cookieBannerOk.addEventListener('click', function(){
+      try { localStorage.setItem(COOKIE_KEY, '1'); } catch (e) {}
+      cookieBanner.classList.remove('is-visible');
+      setTimeout(function(){ cookieBanner.style.display = 'none'; }, reduceMotion ? 0 : 350);
+    });
+  }
+
