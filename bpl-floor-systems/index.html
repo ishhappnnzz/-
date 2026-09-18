@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<script>document.documentElement.classList.add('js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>BPL Floor Systems — промышленные полимерные полы</title>
+<meta name="description" content="Устройство и ремонт напольных систем из полимерных покрытий для промышленных, коммерческих и жилых объектов." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="alternate icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="BPL Floor Systems — на главную">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 12V36" stroke="currentColor" stroke-width="3" style="color:var(--text)"/>
+        <path d="M40 12V36" stroke="currentColor" stroke-width="3" style="color:var(--text)"/>
+        <rect x="10" y="20" width="28" height="8" rx="4" fill="currentColor" style="color:var(--text)"/>
+        <circle cx="24" cy="24" r="3" fill="var(--surface)"/>
+      </svg>
+      <span class="logo-text">
+        <span class="bpl">BPL</span>
+        <span class="sub">FLOOR SYSTEMS</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#objects">Объекты</a>
+      <a href="#process">Процесс</a>
+      <a href="#guarantees">Гарантии</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <div class="header-social">
+        <a href="https://wa.me/79262577950" class="social-btn social-whatsapp" aria-label="Написать в WhatsApp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.6 13.8L3 21l4.4-1.3A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.6"/><path d="M8.5 8.8c.2-.6.7-.6 1.1-.6.3 0 .5.1.6.4l.8 1.7c.1.2 0 .5-.1.6l-.6.6c-.2.2-.2.4-.1.6.5 1 1.5 2 2.5 2.5.2.1.4.1.6-.1l.6-.6c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.6 0 .4 0 .9-.6 1.1-.8.3-2 .3-3.6-.6-1.3-.7-2.7-2.1-3.4-3.4-.9-1.6-.9-2.8-.6-3.6Z" fill="#fff"/></svg>
+        </a>
+        <a href="https://t.me/bplfloor" class="social-btn social-telegram" aria-label="Написать в Telegram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20.5 4.5 3 11.2c-.7.3-.7 1.3.1 1.5l4.2 1.3 1.6 5c.2.7 1.1.8 1.6.3l2.3-2.3 4.3 3.2c.7.5 1.6.1 1.8-.7l3-15.4c.2-.9-.7-1.6-1.4-1.4Z" fill="#fff"/></svg>
+        </a>
+      </div>
+      <a href="#contact" class="btn btn-primary">Заявка</a>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+    <a href="#services">Услуги</a>
+    <a href="#objects">Объекты</a>
+    <a href="#process">Процесс</a>
+    <a href="#guarantees">Гарантии</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero grain">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M8 12V36" stroke="#FFFFFF" stroke-width="3"/><path d="M40 12V36" stroke="#FFFFFF" stroke-width="3"/><rect x="10" y="20" width="28" height="8" rx="4" fill="#FFFFFF"/><circle cx="24" cy="24" r="3" fill="#100F0C"/></svg>
+    </div>
+    <div class="wrap hero-content">
+      <span class="eyebrow">Напольные системы</span>
+      <h1 class="hero-title">Полимерные полы<br><em>без отклонений</em></h1>
+      <p class="lead">Устройство и ремонт напольных систем из полимерных покрытий для промышленных и жилых объектов.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+        <a href="#objects" class="btn btn-outline-inverse">Смотреть объекты</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO TRUST STRIP -->
+  <section class="hero-trust-strip">
+    <div class="wrap">
+      <div class="stat-row" id="statRow">
+        <div class="stat"><div class="num tnum"><span class="count" data-to="20">0</span><em>+</em></div><div class="label"><span class="l1">Лет опыта</span><span class="l2">на рынке</span></div></div>
+        <div class="stat"><div class="num tnum"><span class="count" data-to="5">0</span></div><div class="label"><span class="l1">Направлений</span><span class="l2">покрытий и услуг</span></div></div>
+        <div class="stat"><div class="num tnum"><span class="count" data-to="100">0</span><em>%</em></div><div class="label"><span class="l1">Соблюдение</span><span class="l2">условий сметы</span></div></div>
+        <div class="stat"><div class="num tnum">40–10K<em>+</em></div><div class="label"><span class="l1">Диапазон площади</span><span class="l2">объектов, м²</span></div></div>
+      </div>
+      <div class="tag-row">
+        <span class="tag-pill">Склады</span>
+        <span class="tag-pill">Производство</span>
+        <span class="tag-pill">МОПы</span>
+        <span class="tag-pill">Шоурумы</span>
+        <span class="tag-pill">Спортивные объекты</span>
+        <span class="tag-pill">Жилые помещения</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services grain">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-title">
+          <span class="ghost-num" aria-hidden="true">01</span>
+          <div>
+            <span class="label-sm" style="color:var(--dark-text-soft);">Услуги</span>
+            <h2 style="margin-top:6px;">Что мы делаем</h2>
+          </div>
+        </div>
+        <p class="desc">Полный цикл работ с полимерными покрытиями: от нового устройства пола до восстановления изношенных поверхностей.</p>
+      </div>
+      <div class="provide-list">
+        <div class="provide-card reveal">
+          <div class="icon-tile"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="13" width="24" height="6" rx="3" fill="currentColor"/></svg></div>
+          <div class="provide-text">
+            <h3>Эпоксидные покрытия</h3>
+            <p>Прочные глянцевые покрытия для промышленных объектов и складов.</p>
+          </div>
+        </div>
+        <div class="provide-card reveal">
+          <div class="icon-tile"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="13" width="24" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></div>
+          <div class="provide-text">
+            <h3>Полиуретановые покрытия</h3>
+            <p>Эластичные, износостойкие покрытия для высоких нагрузок.</p>
+          </div>
+        </div>
+        <div class="provide-card reveal">
+          <div class="icon-tile"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="13" width="24" height="6" rx="3" fill="currentColor"/><circle cx="16" cy="16" r="2.2" fill="var(--surface)"/></svg></div>
+          <div class="provide-text">
+            <h3>Антистатические полы</h3>
+            <p>Контролируемое сопротивление для помещений с электроникой.</p>
+          </div>
+        </div>
+        <div class="provide-card reveal">
+          <div class="icon-tile"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="13" width="24" height="6" rx="3" fill="currentColor" opacity=".35"/><rect x="9" y="10" width="14" height="4" rx="2" fill="currentColor"/></svg></div>
+          <div class="provide-text">
+            <h3>3D-полы для жилых помещений</h3>
+            <p>Декоративные наливные полы с объёмным эффектом.</p>
+          </div>
+        </div>
+        <div class="provide-card reveal">
+          <div class="icon-tile"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="13" width="16" height="6" rx="3" fill="currentColor"/><path d="M23 10a6 6 0 0 1 0 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M23 8l2.4 2.4L23 12.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="provide-text">
+            <h3>Ремонт и восстановление</h3>
+            <p>Восстановление изношенных покрытий без замены основания.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJECTS -->
+  <section id="objects" class="objects">
+    <div class="wrap">
+      <div class="objects-inner">
+        <div class="reveal">
+          <span class="label-sm">Объекты</span>
+          <h2 style="font-size:clamp(23px,2.6vw,30px);margin-top:8px;">Какие объекты обслуживаем</h2>
+          <p style="color:var(--text-soft);font-size:15px;margin-top:14px;max-width:44ch;">Работаем с объектами любого масштаба и сложности: от компактных помещений до площадок в тысячи квадратных метров.</p>
+          <div class="objects-tags">
+            <span class="obj-tag">Склады</span>
+            <span class="obj-tag">Производство</span>
+            <span class="obj-tag">МОПы</span>
+            <span class="obj-tag">Шоурумы</span>
+            <span class="obj-tag">Спортивные объекты</span>
+            <span class="obj-tag">Жилые помещения</span>
+          </div>
+        </div>
+        <div class="scale-card reveal">
+          <span class="eyebrow">Масштаб проектов</span>
+          <div class="scale-labels" style="margin-top:20px;">
+            <span class="tnum">40 м²</span>
+            <span class="tnum">10 000+ м²</span>
+          </div>
+          <div class="scale-track"><div class="fill"></div></div>
+          <p class="scale-note">Диапазон площади объектов: от локального ремонта до полноформатных промышленных площадок.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-title">
+          <span class="ghost-num" aria-hidden="true">02</span>
+          <div>
+            <span class="label-sm">Реализованные объекты</span>
+            <h2 style="margin-top:6px;">Как это выглядит на практике</h2>
+          </div>
+        </div>
+        <p class="desc">Семь объектов из разных категорий: от премиального жилого холла до складского комплекса.</p>
+      </div>
+
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-pill is-active" data-index="all">Все</button>
+        <button class="filter-pill" data-index="0">Жильё</button>
+        <button class="filter-pill" data-index="1">Шоурумы</button>
+        <button class="filter-pill" data-index="2">Тех. помещения</button>
+        <button class="filter-pill" data-index="3">Спорт</button>
+        <button class="filter-pill" data-index="4">Производство</button>
+        <button class="filter-pill" data-index="5">Склады</button>
+        <button class="filter-pill" data-index="6">Паркинг</button>
+      </div>
+
+      <div class="gallery-slider reveal">
+        <div class="gallery-viewport">
+          <div class="gallery-track" id="galleryTrack">
+
+            <div class="gallery-slide">
+              <img src="img/gallery-zhilye.jpg" alt="Полимерный пол в премиальном жилом интерьере" loading="lazy">
+              <span class="gallery-slide-label">Премиальный интерьер · жилой холл</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-showroom.jpg" alt="Полимерный пол в шоуруме с декоративными чипами" loading="lazy">
+              <span class="gallery-slide-label">Шоурум · коммерческое помещение</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-tech.jpg" alt="Полимерный пол в техническом помещении" loading="lazy">
+              <span class="gallery-slide-label">Техническое помещение · пищевое производство</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-sport.jpg" alt="Полимерный пол в спортивном зале" loading="lazy">
+              <span class="gallery-slide-label">Спортивный объект · игровой зал</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-production.jpg" alt="Полимерный пол на производстве, сегментированная заливка" loading="lazy">
+              <span class="gallery-slide-label">Производство · сегментированная заливка</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-warehouse.jpg" alt="Полимерный пол на складе" loading="lazy">
+              <span class="gallery-slide-label">Склад · крупногабаритный пролёт</span>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="img/gallery-parking.jpg" alt="Полимерный пол на подземном паркинге" loading="lazy">
+              <span class="gallery-slide-label">Паркинг · подземный уровень</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <div class="gallery-dots" id="galleryDots"></div>
+          <div class="gallery-arrows">
+            <button class="gallery-btn" id="galleryPrev" aria-label="Предыдущий объект">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="gallery-btn" id="galleryNext" aria-label="Следующий объект">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="process-tint">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-title">
+          <span class="ghost-num" aria-hidden="true">03</span>
+          <div>
+            <span class="label-sm">Процесс</span>
+            <h2 style="margin-top:6px;">От заявки до сдачи объекта</h2>
+          </div>
+        </div>
+        <p class="desc">Смета и срок фиксируются на старте проекта и не пересчитываются по ходу работ.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-rail"><div class="process-rail-fill" id="processRailFill"></div></div>
+        <div class="process-step">
+          <div class="process-marker"><svg viewBox="0 0 32 32" fill="none"><path d="M8 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="9" y="14" width="14" height="4.5" rx="2.25" fill="currentColor"/></svg></div>
+          <div class="process-step-body">
+            <span class="step-no">Шаг 01</span>
+            <h3>Замер и диагностика</h3>
+            <p>Выезд инженера, оценка основания, влажности и нагрузки.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-marker"><svg viewBox="0 0 32 32" fill="none"><path d="M8 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="9" y="14" width="14" height="4.5" rx="2.25" fill="currentColor"/><path d="M12.5 16.3l1.8 1.8 3.4-3.4" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="process-step-body">
+            <span class="step-no">Шаг 02</span>
+            <h3>Фиксация сметы</h3>
+            <p>Смета и срок фиксируются на весь объём, без пересчёта позже.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-marker"><svg viewBox="0 0 32 32" fill="none"><rect x="7" y="10" width="18" height="5" rx="2.5" fill="currentColor"/><rect x="7" y="18" width="18" height="5" rx="2.5" fill="currentColor" opacity=".55"/></svg></div>
+          <div class="process-step-body">
+            <span class="step-no">Шаг 03</span>
+            <h3>Монтаж покрытия</h3>
+            <p>Устройство эпоксидного или полиуретанового пола по регламенту.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-marker"><svg viewBox="0 0 32 32" fill="none"><path d="M8 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 12V22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="9" y="12.5" width="14" height="7" rx="3.5" fill="currentColor"/></svg></div>
+          <div class="process-step-body">
+            <span class="step-no">Шаг 04</span>
+            <h3>Сдача объекта</h3>
+            <p>Приёмка, гарантия 5 лет, паспорт объекта.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEES -->
+  <section id="guarantees" class="guarantees grain">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head-title">
+          <span class="ghost-num" aria-hidden="true">04</span>
+          <div>
+            <span class="label-sm" style="color:var(--dark-text-soft);">Гарантии</span>
+            <h2 style="margin-top:6px;">Соблюдаем условия с первого дня</h2>
+          </div>
+        </div>
+        <p class="desc">Объём работ, смета и срок сдачи фиксируются на начальном этапе проекта, без дополнительных согласований по увеличению стоимости после старта работ.</p>
+      </div>
+      <div class="g-grid">
+        <div class="g-card reveal">
+          <div class="icon-tile on-dark" style="margin-bottom:18px;"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="17" r="10.5" stroke="currentColor" stroke-width="2.2"/><path d="M16 10.5v7l4.5 2.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+          <h3>Гарантия сроков</h3>
+          <p>Строго соблюдаем дату сдачи объекта.</p>
+        </div>
+        <div class="g-card reveal">
+          <div class="icon-tile on-dark" style="margin-bottom:18px;"><svg viewBox="0 0 32 32" fill="none"><rect x="6" y="9" width="20" height="5" rx="2.5" fill="currentColor"/><rect x="6" y="18" width="20" height="5" rx="2.5" fill="currentColor" opacity=".55"/></svg></div>
+          <h3>Гарантия материалов</h3>
+          <p>Высокое качество составов и компонентов.</p>
+        </div>
+        <div class="g-card reveal">
+          <div class="icon-tile on-dark" style="margin-bottom:18px;"><svg viewBox="0 0 32 32" fill="none"><path d="M9 9V23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M23 9V23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="10" y="13.5" width="12" height="5" rx="2.5" fill="currentColor"/></svg></div>
+          <h3>Гарантия работ</h3>
+          <p>Поддержка объекта после сдачи.</p>
+        </div>
+        <div class="g-card reveal">
+          <div class="icon-tile on-dark" style="margin-bottom:18px;"><svg viewBox="0 0 32 32" fill="none"><path d="M9 9V23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M23 9V23" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="10" y="13.5" width="12" height="5" rx="2.5" fill="currentColor"/><path d="M13.2 16l1.7 1.7 3.2-3.2" stroke="var(--dark-raised)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Гарантия стоимости</h3>
+          <p>Смета не меняется после подписания.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <div class="contact-info reveal">
+          <span class="label-sm">Контакты</span>
+          <h2 style="margin-top:8px;">Обсудим ваш объект</h2>
+          <p class="lead">Оставьте заявку, и инженер свяжется с вами, чтобы уточнить параметры объекта и согласовать выезд на замер.</p>
+          <div class="contact-person">
+            <div class="contact-avatar">РП</div>
+            <div>
+              <div class="name">Пушаков Роман</div>
+              <div class="role">Руководитель направления</div>
+              <div class="line"><a href="tel:+79262577950">+7 926 257-79-50</a></div>
+              <div class="line"><a href="mailto:r.pushakov@bpleng.ru">r.pushakov@bpleng.ru</a></div>
+              <div class="line"><a href="https://bplfloorsystem.ru" target="_blank" rel="noopener">bplfloorsystem.ru</a></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="request-form reveal" onsubmit="return false;">
+          <div class="f-row">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required />
+          </div>
+          <div class="f-row">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 900 000-00-00" required />
+          </div>
+          <div class="f-row">
+            <label for="area">Площадь объекта, м²</label>
+            <input id="area" name="area" type="text" placeholder="Например, 500" />
+          </div>
+          <div class="f-row">
+            <label for="comment">Комментарий</label>
+            <textarea id="comment" name="comment" placeholder="Тип объекта, сроки, дополнительные пожелания"></textarea>
+          </div>
+          <div class="consent">
+            <input id="consent" type="checkbox" required />
+            <span>Согласен(на) на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a></span>
+          </div>
+          <button type="submit" class="btn btn-dark">Отправить заявку</button>
+          <p class="form-note">Форма демонстрационная: для приёма заявок нужна интеграция с CRM или почтой.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="grain">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12V36" stroke="#FFFFFF" stroke-width="3"/>
+          <path d="M40 12V36" stroke="#FFFFFF" stroke-width="3"/>
+          <rect x="10" y="20" width="28" height="8" rx="4" fill="#FFFFFF"/>
+          <circle cx="24" cy="24" r="3" fill="var(--dark)"/>
+        </svg>
+        <span>
+          <span class="bpl" style="display:block;">BPL</span>
+          <span class="sub" style="display:block;">FLOOR SYSTEMS</span>
+        </span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">Услуги</a>
+        <a href="#objects">Объекты</a>
+        <a href="#process">Процесс</a>
+        <a href="#guarantees">Гарантии</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <a href="#contact" class="btn btn-outline-inverse" style="align-self:center;">Написать нам</a>
+    </div>
+    <div class="footer-bottom">
+      <span>BPL Floor Systems</span>
+      <nav class="footer-legal">
+        <a href="oferta.html">Оферта</a>
+        <a href="user-agreement.html">Пользовательское соглашение</a>
+        <a href="#">Политика cookie</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
