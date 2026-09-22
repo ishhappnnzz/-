@@ -173,7 +173,7 @@
   .hero .content{
     color:var(--tp-white);
     display:flex;flex-direction:column;gap:20px;
-    max-width:840px;
+    max-width:100%;
     position:relative;
   }
   .hero h1{
