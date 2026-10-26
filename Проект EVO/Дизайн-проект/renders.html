@@ -1,0 +1,47 @@
+<title>Квартира EVO в рендерах</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: gallery column — each render full width with a caption strip; drafting-sheet palette shared with the project page. */
+:root{
+  --bg:#F0F1ED; --paper:#FBFBF9; --ink:#1D2125; --muted:#5E646A; --rule:#CDD1CC; --accent:#B5502E;
+  --body:"Golos Text",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16191C;--paper:#1D2125;--ink:#E6E8E4;--muted:#9BA2A8;--rule:#343A40;--accent:#E07A55;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16191C;--paper:#1D2125;--ink:#E6E8E4;--muted:#9BA2A8;--rule:#343A40;--accent:#E07A55;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:36px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+header{display:grid;gap:10px;max-width:72ch}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted)}
+figure{margin:0;display:grid;gap:10px}
+figure img{width:100%;height:auto;display:block;border-radius:4px;border:1px solid var(--rule);background:var(--paper)}
+figcaption{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline}
+figcaption b{font-weight:600}
+figcaption span{color:var(--muted);font-size:14px;min-width:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+.grid>*{min-width:0}
+.note{font-size:14px;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px;max-width:80ch}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Квартира №278 · рендеры Blender / Cycles</p>
+  <h1>Как будет выглядеть квартира</h1>
+  <p>Кадры отрисованы по тем же размерам, что и дизайн-проект. Свет из окон, тени и отражения настоящие, материалы подобраны по палитре проекта.</p>
+</header>
+<figure><img src="r/room.jpg" alt="Комната: диван, ТВ, рабочий стол, терракотовые шторы" loading="lazy"><figcaption><b>Комната</b><span>Оливковый диван 2200 между тумбами, терракотовые шторы, горчичное кресло у окна, стол 1100×500 у стены.</span></figcaption></figure>
+<div class="grid">
+  <figure><img src="r/sofa.jpg" alt="Вид с дивана на ТВ-стену" loading="lazy"><figcaption><b>Вид с дивана</b><span>ТВ 55″, подвесная тумба 1500×270 на высоте 300, рабочее место справа.</span></figcaption></figure>
+  <figure><img src="r/wardrobe.jpg" alt="Гардеробная с открытыми дверями" loading="lazy"><figcaption><b>Гардеробная</b><span>Сетчатая система: колонна полок и корзин, две секции со штангами. Складные двери открыты.</span></figcaption></figure>
+</div>
+<figure><img src="r/kitchen.jpg" alt="Кухня: гарнитур, мойка у угла, вытяжка" loading="lazy"><figcaption><b>Кухня</b><span>Белый низ, орех наверху до потолка, наклонная вытяжка Zibal, мойка у угла, подсветка под шкафами.</span></figcaption></figure>
+<div class="grid">
+  <figure><img src="r/kitchen2.jpg" alt="Кухня: зона у окна с ТВ" loading="lazy"><figcaption><b>Кухня с кресла</b><span>ТВ 37″ на поворотном кронштейне над тумбой 900, льняные шторы.</span></figcaption></figure>
+  <figure><img src="r/bath.jpg" alt="Санузел" loading="lazy"><figcaption><b>Санузел</b><span>Подвесной унитаз на коробе, тумба 450 с зеркалом 800×800, стиральная машина, полотенцесушитель.</span></figcaption></figure>
+</div>
+<figure><img src="r/hall.jpg" alt="Прихожая: коридор и шкаф с зеркальной дверью" loading="lazy"><figcaption><b>Прихожая</b><span>Шкаф с зеркальной дверью справа, впереди коридор в кухню и комнату.</span></figcaption></figure>
+<p class="note">Это рендер по проекту, а не фотография. Фактуры (дерево, ткань, камень) сделаны процедурно, без фототекстур. Реальные оттенки отделки и ткани сверяйте по образцам. Размеры и расстановка точные.</p>
+</div>
