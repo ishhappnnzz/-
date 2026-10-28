@@ -107,18 +107,19 @@ Photorealistic version of r/bath2.jpg. Straight view to the mirror wall from eye
 ## 7. Прихожая · шкаф · `r/hall2.jpg`
 ```
 Photorealistic version of r/hall2.jpg. Built-in hallway wardrobe 1490 wide, 450 deep, floor to ceiling, matte warm white, black plinth 100 mm.
-- Left: narrow cleaning closet 450 with one hinged door and a black vertical bar handle.
-- Right: a two-door wardrobe 1040 wide with two hinged doors of 520 each: left door is a full-height mirror, right door is matte warm white. Black vertical bar handles next to the meeting edges.
-- Top: a row of three hinged mezzanine doors (2200–2650 mm) aligned with the doors below.
+- Left: narrow cleaning closet 450 with one hinged matte white door and a black vertical bar handle.
+- Right: a two-door wardrobe 1040 wide, two hinged doors of 520 each, BOTH full-height mirrors, black vertical bar handles next to the meeting edges.
+- Top: a row of three hinged matte white mezzanine doors (2200–2650 mm) aligned with the doors below.
 - No open niche, no seat. Through the opening on the left: the living room with the olive sofa.
 ```
 
 ## 8. Прихожая · шкаф без дверей · `r/hallin.jpg`
 ```
 Photorealistic cutaway of the same wardrobe with all doors removed (r/hallin.jpg), to show the interior.
-- Left (cleaning closet 450): rail with mop and broom at 1.5 m, two shelves at 1.7 and 1.95 m with cleaning products, a bucket on a pull-out tray on the floor.
-- Middle (516 wide): one pull-out front-to-back clothes rail at 1.8 m with coats and jackets hanging across; a grey electrical panel box on the back wall behind the coats; at the bottom a round mustard (#C99A2E) pouf Ø350 on small wheels.
-- Right (476 wide): a vacuum cleaner on its charging dock on the floor, two angled shoe shelves at 0.8 and 1.0 m with shoes, a shelf with a storage box at 1.3 m, a shelf at 1.6 m, a shelf at 1.9 m with a white Wi-Fi router (four black antennas) and a white socket just above it on the side panel.
+- Left (cleaning closet 450): rail with mop and broom at 1.5 m, two shelves at 1.7 and 1.95 m with cleaning products, a bucket on the floor.
+- Two-door part: a hanging zone 708 wide and a narrow shelf column 300 wide at the right end. Hanging zone: clothes rail at 1.82 m with coats and jackets on slim hangers; a shelf above it at 1.9 m with hats and a storage box; a shelf at 0.45 m with shoes and boots; on the floor under it a round mustard (#C99A2E) pouf Ø350 on small wheels and a stick vacuum on its dock. A grey electrical panel box (RCD) on the back wall behind the coats at 1.5–1.8 m.
+- Shelf column 300: five shelves at 0.45 / 0.8 / 1.15 / 1.5 / 1.85 m with boxes, folded scarves, bags.
+- Mezzanine (2.2–2.65 m) above the right door: a white Wi-Fi router with antennas and a white socket on the side panel.
 - Interior panels matte warm white, no back panel (painted wall visible).
 ```
 
