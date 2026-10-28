@@ -117,8 +117,8 @@ Photorealistic version of r/hall2.jpg. Built-in hallway wardrobe 1490 wide, 450 
 ```
 Photorealistic cutaway of the same wardrobe with all doors removed (r/hallin.jpg), to show the interior.
 - Left (cleaning closet 450): rail with mop and broom at 1.5 m, two shelves at 1.7 and 1.95 m with cleaning products, a bucket on the floor.
-- Two-door part: a hanging zone 708 wide and a narrow shelf column 300 wide at the right end. Hanging zone: clothes rail at 1.82 m with coats and jackets on slim hangers; a shelf above it at 1.9 m with hats and a storage box; a shelf at 0.45 m with shoes and boots; on the floor under it a round mustard (#C99A2E) pouf Ø350 on small wheels and a stick vacuum on its dock. A grey electrical panel box (RCD) on the back wall behind the coats at 1.5–1.8 m.
-- Shelf column 300: five shelves at 0.45 / 0.8 / 1.15 / 1.5 / 1.85 m with boxes, folded scarves, bags.
+- Two-door part: a hanging zone 708 wide and a narrow shelf column 300 wide at the right end. Hanging zone: clothes rail at 1.82 m with coats and jackets on slim hangers; a shelf above it at 1.9 m with hats and a storage box; a shelf at 0.45 m with shoes and boots; on the floor under it a round mustard (#C99A2E) pouf Ø350 on small wheels and a pair of shoes. The stick vacuum stands upright in the cleaning closet on the left.
+- Shelf column 300: shelves at 0.45 / 0.8 / 1.15 / 1.9 m with boxes and folded scarves; between 1.15 and 1.9 m no shelves: a grey electrical panel box (RCD) on the end wall at 1.5–1.8 m.
 - Mezzanine (2.2–2.65 m) above the right door: a white Wi-Fi router with antennas and a white socket on the side panel.
 - Interior panels matte warm white, no back panel (painted wall visible).
 ```
