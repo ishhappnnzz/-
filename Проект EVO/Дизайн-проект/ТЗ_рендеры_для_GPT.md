@@ -106,19 +106,20 @@ Photorealistic version of r/bath2.jpg. Straight view to the mirror wall from eye
 
 ## 7. Прихожая · шкаф · `r/hall2.jpg`
 ```
-Photorealistic version of r/hall2.jpg. Built-in hallway wardrobe 1490 wide, 450 deep, floor to ceiling, matte warm white.
-- Left section: narrow cleaning closet 450 with a black vertical handle.
-- Middle: door with a full-height mirror, black handle.
-- Right: open niche 440 wide: seat at 450 mm with a mustard (#C99A2E) cushion, black coat hooks, a shelf at 1.9 m with a white Wi-Fi router (four black antennas up) and a small white socket above it on the side panel. Under the seat: space for a vacuum cleaner.
-- Through the opening on the left: the living room with the olive sofa.
+Photorealistic version of r/hall2.jpg. Built-in hallway wardrobe 1490 wide, 450 deep, floor to ceiling, matte warm white, black plinth 100 mm.
+- Left: narrow cleaning closet 450 with one hinged door and a black vertical bar handle.
+- Right: a two-door wardrobe 1040 wide with two hinged doors of 520 each: left door is a full-height mirror, right door is matte warm white. Black vertical bar handles next to the meeting edges.
+- Top: a row of three hinged mezzanine doors (2200–2650 mm) aligned with the doors below.
+- No open niche, no seat. Through the opening on the left: the living room with the olive sofa.
 ```
 
-## 8. Прихожая · ниша с роутером · `r/hall3.jpg`
+## 8. Прихожая · шкаф без дверей · `r/hallin.jpg`
 ```
-Photorealistic version of r/hall3.jpg. Eye-level view (1.65 m) into the hallway niche.
-- Shelf at 1.9 m: white router, only its four black antennas visible above the shelf edge; short cable to a white socket on the niche side panel at 2.0 m.
-- Black hooks below the shelf; wardrobe doors matte warm white; mirror door on the left.
-- Entrance door on the right: dark grey metal, black handle.
+Photorealistic cutaway of the same wardrobe with all doors removed (r/hallin.jpg), to show the interior.
+- Left (cleaning closet 450): rail with mop and broom at 1.5 m, two shelves at 1.7 and 1.95 m with cleaning products, a bucket on a pull-out tray on the floor.
+- Middle (516 wide): one pull-out front-to-back clothes rail at 1.8 m with coats and jackets hanging across; a grey electrical panel box on the back wall behind the coats; at the bottom a round mustard (#C99A2E) pouf Ø350 on small wheels.
+- Right (476 wide): a vacuum cleaner on its charging dock on the floor, two angled shoe shelves at 0.8 and 1.0 m with shoes, a shelf with a storage box at 1.3 m, a shelf at 1.6 m, a shelf at 1.9 m with a white Wi-Fi router (four black antennas) and a white socket just above it on the side panel.
+- Interior panels matte warm white, no back panel (painted wall visible).
 ```
 
 ## 9. Прихожая · от входа · `r/hall.jpg`
@@ -137,4 +138,13 @@ Photorealistic version of r/wardrobe.jpg. Walk-in closet 1.65 × 0.9 m with fold
 - Back wall: two hanging sections with clothes in muted colours plus a few terracotta and olive pieces.
 - Warm LED strip in an aluminium profile under the top shelf.
 - Folding doors: black aluminium frames with satin glass.
+```
+
+## 11. Санузел · этажерка · `r/bath3.jpg`
+```
+Photorealistic version of r/bath3.jpg. Bathroom view towards the wall with the wall-hung toilet.
+- Free-standing étagère 350 wide, 250 deep, 1800 high, standing against the wall between the toilet and the corner: thin black metal frame, six light oak (or bamboo) shelves.
+- On the shelves: rolled terracotta and cream towels, a woven basket, folded towels, a white ceramic jar on top.
+- Wall-hung white toilet on the tiled box with a shelf on top; floating white vanity and the backlit mirror on the left.
+- Tiles: warm beige porcelain and white, like the developer's renders.
 ```
