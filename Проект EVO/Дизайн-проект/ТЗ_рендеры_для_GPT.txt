@@ -33,7 +33,7 @@ APARTMENT FINISHES
 
 BUILT-IN FURNITURE (laminated chipboard, matte)
 - White: plain neutral white (#F3F2EE) — all carcasses, kitchen base fronts, hallway wardrobe.
-- Wood: light warm Sonoma oak (#C7A67D), straight grain — kitchen wall cabinets, hood box, fridge column.
+- Wood: light warm Sonoma oak (#C7A67D), straight grain — kitchen wall cabinets, hood box, side panel and mezzanine over the fridge.
 - Plinths: black matte. Handles and Gola profile: black matte.
 - Kitchen worktop and splashback: light grey stone (#E3E1DC).
 
@@ -77,6 +77,7 @@ Photorealistic version of r/kitchen.jpg. Kitchen 2.87 × 3.7 m, window at the en
 - LED strip under the wall cabinets, warm 3000 K.
 - Near the window: low white TV console 900×400, small TV on a swivel arm above it.
 - Kitchen curtains: natural linen, light beige.
+- Freestanding white fridge 600 wide by the kitchen door, in a niche with a Sonoma oak side panel and a Sonoma oak mezzanine cabinet above it.
 - Dining table 1100×750 light oak with black legs, four chairs with olive seats.
 ```
 
